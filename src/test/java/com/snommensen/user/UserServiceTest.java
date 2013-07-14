@@ -26,10 +26,10 @@ public class UserServiceTest {
     }
 
     @Test
-    public void save_userIsSaved() throws Exception {
-        User savedUser = userService.create(user);
+    public void create_userIsCreated() throws Exception {
+        User createdUser = userService.create(user);
 
-        User foundUser = userService.get(savedUser.getId());
+        User foundUser = userService.get(createdUser.getId());
 
         assertThat(foundUser.getId(), equalTo(user.getId()));
 
@@ -39,11 +39,11 @@ public class UserServiceTest {
     }
 
     @Test
-    public void saveTenUsers_tenUsersAreSaved() throws Exception {
+    public void createTenUsers_tenUsersAreCreated() throws Exception {
         for (int i  = 0; i < 10; i++) {
-            User savedUser = userService.create(user);
+            User createdUser = userService.create(user);
 
-            User foundUser = userService.get(savedUser.getId());
+            User foundUser = userService.get(createdUser.getId());
 
             assertThat(foundUser.getId(), equalTo(user.getId()));
         }
