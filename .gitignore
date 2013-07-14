@@ -1,0 +1,18 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+
+# IDE Files #
+.idea
+*.iml
+*.ipr
+*.iws
+
+# Gradle Files #
+.gradle
+build
+gradle.properties
+
+
