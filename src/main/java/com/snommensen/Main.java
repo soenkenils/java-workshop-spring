@@ -1,6 +1,5 @@
 package com.snommensen;
 
-import com.snommensen.user.InMemoryUserRepository;
 import com.snommensen.user.User;
 import com.snommensen.user.UserService;
 import org.slf4j.Logger;
@@ -18,6 +17,8 @@ public class Main {
 
         User user = User.create("Peter", "Fox", "peter.fox@gmail.com");
 
-        userService.create(user);
+        User createdUser = userService.create(user);
+
+        LOG.info("Created user: " + createdUser);
     }
 }
